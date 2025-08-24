@@ -1,0 +1,11 @@
+{
+  "field.name": "Link",
+  "field.description": "Wählen Sie einen URL-Pfad aus einem anderen Inhaltstyp",
+  "options.notfound": "Keine Optionen",
+  "loading.message": "Lädt...",
+  "fetch.error": "Beim Abrufen der URL-Pfade ist ein Fehler aufgetreten",
+  "validation.error": "URL-Pfade sind nicht gültig",
+  "unknown.error": "Ein unbekannter Fehler ist aufgetreten",
+  "options.advanced.requiredField": "Dieses Feld ist erforderlich.",
+  "options.advanced.requiredField.description": "Sie können keinen Eintrag erstellen, wenn Sie dieses Feld nicht ausfüllen."
+}

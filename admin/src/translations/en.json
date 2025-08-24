@@ -1,0 +1,11 @@
+{
+  "field.name": "Link",
+  "field.description": "Select a url path from another content type",
+  "options.notfound": "No options",
+  "loading.message": "Loading...",
+  "fetch.error": "An error occurred with fetching url paths",
+  "validation.error": "url paths are not valid",
+  "unknown.error": "An unknown error occurred",
+  "options.advanced.requiredField": "This field is required.",
+  "options.advanced.requiredField.description": "You won't be able to create an entry if you don't fill in this field."
+}
