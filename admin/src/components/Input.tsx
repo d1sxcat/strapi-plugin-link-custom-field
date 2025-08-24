@@ -10,7 +10,7 @@ import { useIntl } from 'react-intl';
 import { errorFormatting } from '../utils/errorFormatting';
 import { getTranslation } from '../utils/getTranslation';
 
-const PAGE_SIZE = 25;
+const PAGE_SIZE = 5;
 
 export const Input = forwardRef<HTMLInputElement, CustomFieldProps>(
   (
@@ -41,7 +41,7 @@ export const Input = forwardRef<HTMLInputElement, CustomFieldProps>(
       isFetchingNextPage,
       status,
     } = useInfiniteQuery({
-      queryKey: ['webtools', 'links'],
+      queryKey: ['webtools', 'link'],
       async queryFn({ pageParam = 1 }) {
         const { data } = await get(
           `webtools/url-alias/findMany${stringify(
@@ -81,9 +81,9 @@ export const Input = forwardRef<HTMLInputElement, CustomFieldProps>(
             id: getTranslation('loading.message'),
             defaultMessage: 'Loading...',
           })}
-          hasMoreItems={(!isFetching && !isFetchingNextPage && hasNextPage) || false}
+          hasMoreItems={hasNextPage}
           onClear={() => handleChange()}
-          onLoadMore={fetchNextPage}
+          onLoadMore={() => fetchNextPage()}
           noOptionsMessage={() =>
             status === 'error'
               ? formatMessage({

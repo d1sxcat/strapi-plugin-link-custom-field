@@ -30,6 +30,12 @@ export interface CustomFieldProps {
 }
 
 const queryClient = new QueryClient();
+queryClient.setDefaultOptions({
+  queries:{
+    cacheTime: 1000 * 60,
+    staleTime: 1000 * 60,
+  }
+})
 
 export const LinkField = forwardRef<HTMLInputElement, CustomFieldProps>((props, ref) => {
   return (
