@@ -1,3 +1,3 @@
 # strapi-plugin-link-custom-field
 
-Grab Slugs and url paths from other content types
+Grab url_paths generated with the strapi webtools plugin and save them as a string.
